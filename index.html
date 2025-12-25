@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>BCA Web Designing Lab Programs (11–15)</title>
+
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background: #ffffe0;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: navy;
+}
+
+h2 {
+  background: #222;
+  color: white;
+  padding: 8px;
+}
+
+pre {
+  background: #f0f0f0;
+  padding: 15px;
+  overflow-x: auto;
+  border: 1px solid #444;
+}
+
+button {
+  margin: 10px 0;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+</style>
+
+<script>
+function copyCode(id) {
+  const text = document.getElementById(id).innerText;
+  navigator.clipboard.writeText(text);
+  alert("Code copied");
+}
+</script>
+</head>
+
+<body>
+
+<h1>BCA Web Designing Lab Programs (11–15)</h1>
+
+<!-- ================= PROGRAM 11 ================= -->
+<h2>Program 11: Java Script Program to create application form</h2>
+<button onclick="copyCode('p11')">Copy Program 11</button>
+
+<pre id="p11"><code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Application Form&lt;/title&gt;
+  &lt;style&gt;
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    input, textarea { display: block; margin: 10px 0; width: 300px; }
+    button { padding: 5px 10px; }
+  &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+  &lt;h2&gt;Application Form&lt;/h2&gt;
+
+  &lt;form id="appForm"&gt;
+    &lt;input type="text" id="name" placeholder="Full Name" required&gt;
+    &lt;input type="email" id="email" placeholder="Email" required&gt;
+    &lt;input type="number" id="age" placeholder="Age" required&gt;
+    &lt;textarea id="address" placeholder="Address" required&gt;&lt;/textarea&gt;
+    &lt;button type="submit"&gt;Submit&lt;/button&gt;
+  &lt;/form&gt;
+
+  &lt;p id="result"&gt;&lt;/p&gt;
+
+  &lt;script&gt;
+    document.getElementById("appForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const age = document.getElementById("age").value;
+      const address = document.getElementById("address").value;
+
+      document.getElementById("result").innerText =
+        `Submitted:\nName: ${name}\nEmail: ${email}\nAge: ${age}\nAddress: ${address}`;
+
+      this.reset();
+    });
+  &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<!-- ================= PROGRAM 12 ================= -->
+<h2>Program 12: Java Script Program to demonstrate Internal CSS</h2>
+<button onclick="copyCode('p12')">Copy Program 12</button>
+
+<pre id="p12"><code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Internal CSS Example&lt;/title&gt;
+  &lt;style&gt;
+    body {
+      background-color: lightyellow;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 30px;
+    }
+    h1 { color: darkblue; }
+    p { color: green; font-size: 18px; }
+    button {
+      background-color: lightblue;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: deepskyblue;
+      color: white;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+  &lt;h1&gt;Internal CSS with JavaScript&lt;/h1&gt;
+  &lt;p id="message"&gt;Click the button to change my color!&lt;/p&gt;
+  &lt;button onclick="changeColor()"&gt;Change Color&lt;/button&gt;
+
+  &lt;script&gt;
+    function changeColor() {
+      document.getElementById("message").style.color = "red";
+      document.getElementById("message").style.fontSize = "22px";
+    }
+  &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<!-- ================= PROGRAM 13 ================= -->
+<h2>Program 13: Java Script Program to demonstrate External Style Sheets</h2>
+<button onclick="copyCode('p13_html')">Copy Program 13 HTML</button>
+
+<pre id="p13_html"><code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;External CSS Demo&lt;/title&gt;
+  &lt;link rel="stylesheet" type="text/css" href="style1.css" /&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h2&gt;External CSS with JavaScript Web App&lt;/h2&gt;
+  &lt;div id="styledBox"&gt;This is a styled box.&lt;/div&gt;
+  &lt;button onclick="updateContent()"&gt;Change Text&lt;/button&gt;
+
+  &lt;script&gt;
+    function updateContent() {
+      document.getElementById("styledBox").innerHTML =
+        "Text changed using JavaScript!";
+    }
+  &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<button onclick="copyCode('p13_css')">Copy Program 13 CSS</button>
+
+<pre id="p13_css"><code>
+body {
+  background-color: #f0f8ff;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 40px;
+}
+
+h2 {
+  color: #2c3e50;
+}
+
+#styledBox {
+  width: 300px;
+  height: 150px;
+  background-color: #dff9fb;
+  border: 2px solid #22a6b3;
+  margin: 20px auto;
+  border-radius: 10px;
+  line-height: 150px;
+  font-size: 18px;
+  color: #130f40;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #22a6b3;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0abde3;
+}
+</code></pre>
+
+<!-- ================= PROGRAM 14 ================= -->
+<h2>Program 14: Java Script Program to find factorial using external JS</h2>
+<button onclick="copyCode('p14_html')">Copy Program 14 HTML</button>
+
+<pre id="p14_html"><code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Factorial Calculator&lt;/title&gt;
+  &lt;script src="factorial.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h2&gt;Factorial Finder&lt;/h2&gt;
+  &lt;label&gt;Enter a number:&lt;/label&gt;
+  &lt;input type="number" id="number" /&gt;
+  &lt;button onclick="calculateFactorial()"&gt;Calculate Factorial&lt;/button&gt;
+  &lt;p id="result"&gt;&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<button onclick="copyCode('p14_js')">Copy Program 14 JS</button>
+
+<pre id="p14_js"><code>
+function calculateFactorial()
+{
+  var num = parseInt(document.getElementById("number").value);
+  var resultElement = document.getElementById("result");
+
+  if (isNaN(num) || num < 0) {
+    resultElement.innerHTML = "Please enter a non-negative integer.";
+    return;
+  }
+
+  var factorial = 1;
+  for (var i = 1; i <= num; i++) {
+    factorial *= i;
+  }
+
+  resultElement.innerHTML =
+    "Factorial of " + num + " is: " + factorial;
+}
+</code></pre>
+
+<!-- ================= PROGRAM 15 ================= -->
+<h2>Program 15: Java Script Program to print Fibonacci series</h2>
+<button onclick="copyCode('p15')">Copy Program 15</button>
+
+<pre id="p15"><code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Fibonacci Series&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h2&gt;Fibonacci Series Generator&lt;/h2&gt;
+  &lt;label&gt;Enter number of terms (N):&lt;/label&gt;
+  &lt;input type="number" id="terms" /&gt;
+  &lt;button onclick="generateFibonacci()"&gt;Generate&lt;/button&gt;
+  &lt;p id="result"&gt;&lt;/p&gt;
+
+  &lt;script&gt;
+   
+function generateFibonacci() {
+  let n = parseInt(document.getElementById("terms").value);
+  let resultElement = document.getElementById("result");
+
+  if (isNaN(n) || n <= 0) {
+    resultElement.innerHTML = "Please enter a positive integer.";
+    return;
+  }
+
+  let fibSeries = [];
+  let a = 0, b = 1;
+
+  for (let i = 0; i < n; i++) {
+    fibSeries.push(a);
+    let temp = a + b;
+    a = b;
+    b = temp;
+  }
+
+  resultElement.innerHTML =
+    "Fibonacci Series up to " + n + " terms<br>" +
+    fibSeries.join(", ");
+}
+
+
+  &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+</body>
+</html>
