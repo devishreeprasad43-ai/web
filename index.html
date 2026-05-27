@@ -47,262 +47,501 @@ function copyCode(id) {
 
 <body>
 
-<h1>BCA Web Designing Lab Programs (11–15)</h1>
+<h1>BCA </h1>
+
+<!-- ================= PROGRAM 1 ================= -->
+<h2>Program 1: Write and Execute a Simple Python Program</h2>
+
+<button onclick="copyCode('p1')">
+  Copy Program 1
+</button>
+
+<pre id="p1"><code>
+print("Hello, World!")
+
+x = "Python"
+y = "is"
+z = "awesome"
+
+print(x)
+print(y)
+print(z)
+
+print(x, y, z)
+
+print(5 + 9)
+</code></pre>
+
+
+<!-- ================= PROGRAM 2 ================= -->
+<h2>Program 2: Python Program Using Variables and Datatypes</h2>
+
+<button onclick="copyCode('p2')">
+  Copy Program 2
+</button>
+
+<pre id="p2"><code>
+student_name = "John"
+roll_number = 22
+percentage = 89.53
+is_passed = True
+
+print("Student Name:", student_name, "Type:", type(student_name))
+print("Roll Number:", roll_number, "Type:", type(roll_number))
+print("Percentage:", percentage, "Type:", type(percentage))
+print("Is Passed:", is_passed, "Type:", type(is_passed))
+</code></pre>
+
+
+<!-- ================= PROGRAM 3 ================= -->
+<h2>Program 3: Python Program for Arithmetic and Logical Operations</h2>
+
+<button onclick="copyCode('p3')">
+  Copy Program 3
+</button>
+
+<pre id="p3"><code>
+a = 12
+b = 7
+
+print("Arithmetic Operations")
+
+print("Addition:", a + b)
+print("Subtraction:", a - b)
+print("Multiplication:", a * b)
+print("Division:", a / b)
+print("Modulus:", a % b)
+
+m = True
+n = False
+
+print("\nLogical Operations")
+
+print("m AND n:", m and n)
+print("m OR n:", m or n)
+print("NOT m:", not m)
+print("NOT n:", not n)
+</code></pre>
+
+
+<!-- ================= PROGRAM 4 ================= -->
+<h2>Program 4: Python Program for User Input and Output</h2>
+
+<button onclick="copyCode('p4')">
+  Copy Program 4
+</button>
+
+<pre id="p4"><code>
+name = input("Enter your name: ")
+age = input("Enter your age: ")
+course = input("Enter your course: ")
+
+print("\nUser Details:")
+
+print("Name:", name)
+print("Age:", age)
+print("Course:", course)
+</code></pre>
+
+
+<!-- ================= PROGRAM 5 ================= -->
+<h2>Program 5: Python Program for Odd and Even Number</h2>
+
+<button onclick="copyCode('p5')">
+  Copy Program 5
+</button>
+
+<pre id="p5"><code>
+number = int(input("Enter the number: "))
+
+if number % 2 == 0:
+    print("The given number is even.")
+else:
+    print("The given number is odd.")
+</code></pre>
+
+
+<!-- ================= PROGRAM 6 ================= -->
+<h2>Program 6: Python Program for Fibonacci Series</h2>
+
+<button onclick="copyCode('p6')">
+  Copy Program 6
+</button>
+
+<pre id="p6"><code>
+n = int(input("Enter the number: "))
+
+a = 0
+b = 1
+
+print("Fibonacci Series:")
+
+for i in range(n):
+    print(a, end=" ")
+    a, b = b, a + b
+</code></pre>
+
+
+<!-- ================= PROGRAM 7 ================= -->
+<h2>Program 7: Python Program for Prime Number</h2>
+
+<button onclick="copyCode('p7')">
+  Copy Program 7
+</button>
+
+<pre id="p7"><code>
+n = int(input("Enter the number: "))
+
+if n > 1:
+    for i in range(2, n):
+        if n % i == 0:
+            print(n, "is not a prime number.")
+            break
+    else:
+        print(n, "is a prime number.")
+else:
+    print("Number should be greater than zero.")
+</code></pre>
+
+
+<!-- ================= PROGRAM 8 ================= -->
+<h2>Program 8: Python Program Using Functions</h2>
+
+<button onclick="copyCode('p8')">
+  Copy Program 8
+</button>
+
+<pre id="p8"><code>
+def student_info(name, age):
+    print("Name:", name)
+    print("Age:", age)
+
+student_info("John", 59)
+</code></pre>
+
+
+<!-- ================= PROGRAM 9 ================= -->
+<h2>Program 9: Python Program for Exception Handling</h2>
+
+<button onclick="copyCode('p9')">
+  Copy Program 9
+</button>
+
+<pre id="p9"><code>
+try:
+    numerator = int(input("Enter numerator: "))
+    denominator = int(input("Enter denominator: "))
+
+    result = numerator / denominator
+
+except ZeroDivisionError:
+    print("Error: Division by zero is not allowed")
+
+except ValueError:
+    print("Error: Invalid input")
+
+else:
+    print("Result:", result)
+
+finally:
+    print("Execution completed")
+</code></pre>
+
+
+<!-- ================= PROGRAM 10 ================= -->
+<h2>Program 10: Python Program for CRUD Operations on List</h2>
+
+<button onclick="copyCode('p10')">
+  Copy Program 10
+</button>
+
+<pre id="p10"><code>
+fruits = ['Banana', 'Apple', 'Orange', 'Grape']
+
+print(fruits)
+
+print(fruits[0])
+
+fruits[0] = 'Mango'
+
+print(fruits)
+
+fruits.remove('Apple')
+
+print(fruits)
+
+del fruits[1]
+
+print(fruits)
+</code></pre>
+
 
 <!-- ================= PROGRAM 11 ================= -->
-<h2>Program 11: Java Script Program to create application form</h2>
-<button onclick="copyCode('p11')">Copy Program 11</button>
+<h2>Program 11: Python Program for String Manipulation</h2>
+
+<button onclick="copyCode('p11')">
+  Copy Program 11
+</button>
 
 <pre id="p11"><code>
-&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-  &lt;title&gt;Application Form&lt;/title&gt;
-  &lt;style&gt;
-    body { font-family: Arial, sans-serif; padding: 20px; }
-    input, textarea { display: block; margin: 10px 0; width: 300px; }
-    button { padding: 5px 10px; }
-  &lt;/style&gt;
-&lt;/head&gt;
+str1 = "Hello, World!"
+str2 = "I Love Python"
 
-&lt;body&gt;
-  &lt;h2&gt;Application Form&lt;/h2&gt;
+print(str1 == str2)
 
-  &lt;form id="appForm"&gt;
-    &lt;input type="text" id="name" placeholder="Full Name" required&gt;
-    &lt;input type="email" id="email" placeholder="Email" required&gt;
-    &lt;input type="number" id="age" placeholder="Age" required&gt;
-    &lt;textarea id="address" placeholder="Address" required&gt;&lt;/textarea&gt;
-    &lt;button type="submit"&gt;Submit&lt;/button&gt;
-  &lt;/form&gt;
+greet = "Hello "
+name = "John"
 
-  &lt;p id="result"&gt;&lt;/p&gt;
+result = greet + name
 
-  &lt;script&gt;
-    document.getElementById("appForm").addEventListener("submit", function(e) {
-      e.preventDefault();
+print(result)
 
-      const name = document.getElementById("name").value;
-      const email = document.getElementById("email").value;
-      const age = document.getElementById("age").value;
-      const address = document.getElementById("address").value;
+text = "Good Morning"
 
-      document.getElementById("result").innerText =
-        `Submitted:\nName: ${name}\nEmail: ${email}\nAge: ${age}\nAddress: ${address}`;
+print(len(text))
+print(text[0])
+print(text[0:4])
 
-      this.reset();
-    });
-  &lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;
+quote = "Python is easy"
+
+print(quote.replace("easy", "powerful"))
 </code></pre>
+
 
 <!-- ================= PROGRAM 12 ================= -->
-<h2>Program 12: Java Script Program to demonstrate Internal CSS</h2>
-<button onclick="copyCode('p12')">Copy Program 12</button>
+<h2>Program 12: Python Program for File Handling</h2>
+
+<button onclick="copyCode('p12')">
+  Copy Program 12
+</button>
 
 <pre id="p12"><code>
-&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-  &lt;title&gt;Internal CSS Example&lt;/title&gt;
-  &lt;style&gt;
-    body {
-      background-color: lightyellow;
-      font-family: Arial, sans-serif;
-      text-align: center;
-      padding: 30px;
-    }
-    h1 { color: darkblue; }
-    p { color: green; font-size: 18px; }
-    button {
-      background-color: lightblue;
-      border: none;
-      padding: 10px 20px;
-      font-size: 16px;
-      cursor: pointer;
-    }
-    button:hover {
-      background-color: deepskyblue;
-      color: white;
-    }
-  &lt;/style&gt;
-&lt;/head&gt;
+f = open("test.txt", "w")
 
-&lt;body&gt;
-  &lt;h1&gt;Internal CSS with JavaScript&lt;/h1&gt;
-  &lt;p id="message"&gt;Click the button to change my color!&lt;/p&gt;
-  &lt;button onclick="changeColor()"&gt;Change Color&lt;/button&gt;
+f.write("Welcome to Python\n")
+f.write("Python is interesting\n")
 
-  &lt;script&gt;
-    function changeColor() {
-      document.getElementById("message").style.color = "red";
-      document.getElementById("message").style.fontSize = "22px";
-    }
-  &lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;
+f.close()
+
+f = open("test.txt", "r")
+
+data = f.read()
+
+print(data)
+
+f.close()
 </code></pre>
+
 
 <!-- ================= PROGRAM 13 ================= -->
-<h2>Program 13: Java Script Program to demonstrate External Style Sheets</h2>
-<button onclick="copyCode('p13_html')">Copy Program 13 HTML</button>
+<h2>Program 13: Python Program Using Classes and Objects</h2>
 
-<pre id="p13_html"><code>
-&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-  &lt;title&gt;External CSS Demo&lt;/title&gt;
-  &lt;link rel="stylesheet" type="text/css" href="style1.css" /&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;h2&gt;External CSS with JavaScript Web App&lt;/h2&gt;
-  &lt;div id="styledBox"&gt;This is a styled box.&lt;/div&gt;
-  &lt;button onclick="updateContent()"&gt;Change Text&lt;/button&gt;
+<button onclick="copyCode('p13')">
+  Copy Program 13
+</button>
 
-  &lt;script&gt;
-    function updateContent() {
-      document.getElementById("styledBox").innerHTML =
-        "Text changed using JavaScript!";
-    }
-  &lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;
+<pre id="p13"><code>
+class Employee:
+
+    def putdata(self):
+        self.id = int(input("Enter Employee ID: "))
+        self.name = input("Enter Employee Name: ")
+        self.salary = float(input("Enter Salary: "))
+
+    def display(self):
+        print("Employee ID:", self.id)
+        print("Employee Name:", self.name)
+        print("Employee Salary:", self.salary)
+
+a = Employee()
+
+a.putdata()
+
+a.display()
 </code></pre>
 
-<button onclick="copyCode('p13_css')">Copy Program 13 CSS</button>
-
-<pre id="p13_css"><code>
-body {
-  background-color: #f0f8ff;
-  font-family: Arial, sans-serif;
-  text-align: center;
-  padding: 40px;
-}
-
-h2 {
-  color: #2c3e50;
-}
-
-#styledBox {
-  width: 300px;
-  height: 150px;
-  background-color: #dff9fb;
-  border: 2px solid #22a6b3;
-  margin: 20px auto;
-  border-radius: 10px;
-  line-height: 150px;
-  font-size: 18px;
-  color: #130f40;
-}
-
-button {
-  padding: 10px 20px;
-  font-size: 16px;
-  background-color: #22a6b3;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #0abde3;
-}
-</code></pre>
 
 <!-- ================= PROGRAM 14 ================= -->
-<h2>Program 14: Java Script Program to find factorial using external JS</h2>
-<button onclick="copyCode('p14_html')">Copy Program 14 HTML</button>
+<h2>Program 14: Python Program for Inheritance</h2>
 
-<pre id="p14_html"><code>
-&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-  &lt;title&gt;Factorial Calculator&lt;/title&gt;
-  &lt;script src="factorial.js"&gt;&lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;h2&gt;Factorial Finder&lt;/h2&gt;
-  &lt;label&gt;Enter a number:&lt;/label&gt;
-  &lt;input type="number" id="number" /&gt;
-  &lt;button onclick="calculateFactorial()"&gt;Calculate Factorial&lt;/button&gt;
-  &lt;p id="result"&gt;&lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;
+<button onclick="copyCode('p14')">
+  Copy Program 14
+</button>
+
+<pre id="p14"><code>
+class Animal:
+
+    def speak(self):
+        print("Animal makes a sound")
+
+class Dog(Animal):
+
+    def bark(self):
+        print("Dog barks")
+
+d = Dog()
+
+d.speak()
+d.bark()
 </code></pre>
 
-<button onclick="copyCode('p14_js')">Copy Program 14 JS</button>
-
-<pre id="p14_js"><code>
-function calculateFactorial()
-{
-  var num = parseInt(document.getElementById("number").value);
-  var resultElement = document.getElementById("result");
-
-  if (isNaN(num) || num < 0) {
-    resultElement.innerHTML = "Please enter a non-negative integer.";
-    return;
-  }
-
-  var factorial = 1;
-  for (var i = 1; i <= num; i++) {
-    factorial *= i;
-  }
-
-  resultElement.innerHTML =
-    "Factorial of " + num + " is: " + factorial;
-}
-</code></pre>
 
 <!-- ================= PROGRAM 15 ================= -->
-<h2>Program 15: Java Script Program to print Fibonacci series</h2>
-<button onclick="copyCode('p15')">Copy Program 15</button>
+<h2>Program 15: Python Program for Method Overriding</h2>
+
+<button onclick="copyCode('p15')">
+  Copy Program 15
+</button>
 
 <pre id="p15"><code>
-&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-  &lt;title&gt;Fibonacci Series&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;h2&gt;Fibonacci Series Generator&lt;/h2&gt;
-  &lt;label&gt;Enter number of terms (N):&lt;/label&gt;
-  &lt;input type="number" id="terms" /&gt;
-  &lt;button onclick="generateFibonacci()"&gt;Generate&lt;/button&gt;
-  &lt;p id="result"&gt;&lt;/p&gt;
+class Animal:
 
-  &lt;script&gt;
-   
-function generateFibonacci() {
-  let n = parseInt(document.getElementById("terms").value);
-  let resultElement = document.getElementById("result");
+    def speak(self):
+        print("Animal makes a sound")
 
-  if (isNaN(n) || n <= 0) {
-    resultElement.innerHTML = "Please enter a positive integer.";
-    return;
-  }
+class Dog(Animal):
 
-  let fibSeries = [];
-  let a = 0, b = 1;
+    def speak(self):
+        print("Dog barks")
 
-  for (let i = 0; i < n; i++) {
-    fibSeries.push(a);
-    let temp = a + b;
-    a = b;
-    b = temp;
-  }
+a = Animal()
+d = Dog()
 
-  resultElement.innerHTML =
-    "Fibonacci Series up to " + n + " terms<br>" +
-    fibSeries.join(", ");
-}
-
-
-  &lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;
+a.speak()
+d.speak()
 </code></pre>
 
+
+<!-- ================= PROGRAM 16 ================= -->
+<h2>Program 16: Python Program Using Built-in Modules</h2>
+
+<button onclick="copyCode('p16')">
+  Copy Program 16
+</button>
+
+<pre id="p16"><code>
+import math
+
+print(math.sqrt(16))
+print(math.pi)
+
+import random
+
+print(random.randint(1, 100))
+</code></pre>
+
+
+<!-- ================= PROGRAM 17 ================= -->
+<h2>Program 17: Python Program Using User Defined Function</h2>
+
+<button onclick="copyCode('p17')">
+  Copy Program 17
+</button>
+
+<pre id="p17"><code>
+def calculator(a, b):
+
+    print("Addition =", a + b)
+    print("Subtraction =", a - b)
+    print("Multiplication =", a * b)
+    print("Division =", a / b)
+
+calculator(8, 4)
+</code></pre>
+
+
+<!-- ================= PROGRAM 18 ================= -->
+<h2>Program 18: Python Program Using NumPy</h2>
+
+<button onclick="copyCode('p18')">
+  Copy Program 18
+</button>
+
+<pre id="p18"><code>
+import numpy as np
+
+arr1 = np.array([1, 2, 3, 4, 5])
+arr2 = np.array([5, 4, 3, 2, 1])
+
+print("Addition:", arr1 + arr2)
+print("Subtraction:", arr1 - arr2)
+print("Multiplication:", arr1 * arr2)
+print("Division:", arr1 / arr2)
+</code></pre>
+
+
+<!-- ================= PROGRAM 19 ================= -->
+<h2>Program 19: Python Program Using Pandas</h2>
+
+<button onclick="copyCode('p19')">
+  Copy Program 19
+</button>
+
+<pre id="p19"><code>
+import pandas as pd
+
+data = {
+
+    "Name": ["Ram", "Sam", "Amit"],
+    "Age": [20, 21, 19],
+    "Marks": [85, 90, 78]
+
+}
+
+df = pd.DataFrame(data)
+
+print(df)
+</code></pre>
+
+
+<!-- ================= PROGRAM 20 ================= -->
+<h2>Program 20: Python Program Using SQLite Database</h2>
+
+<button onclick="copyCode('p20')">
+  Copy Program 20
+</button>
+
+<pre id="p20"><code>
+import sqlite3
+
+conn = sqlite3.connect("example.db")
+
+cursor = conn.cursor()
+
+cursor.execute('''
+CREATE TABLE IF NOT EXISTS students
+(
+    id INTEGER PRIMARY KEY,
+    name TEXT,
+    age INTEGER
+)
+''')
+
+print("Table Created Successfully")
+
+conn.close()
+</code></pre>
+
+
+<!-- ================= PROGRAM 21 ================= -->
+<h2>Program 21: Python Flask Web Application</h2>
+
+<button onclick="copyCode('p21')">
+  Copy Program 21
+</button>
+
+<pre id="p21"><code>
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route("/")
+
+def home():
+    return "Flask is Working"
+
+if __name__ == "__main__":
+    app.run(debug=True)
+</code></pre>
 </body>
 </html>
